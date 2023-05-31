@@ -42,8 +42,8 @@ layout: example/views/Author8col
             "element": 'ol',
             "itemsList": [
                 {
-                    "text": 'Email addresses must match',
-                    "url": '#fullname-error',
+                    "text": 'Confirm your email address',
+                    "url": '#email-error',
                     "variants": "inPageLink"
                 }
             ]
@@ -58,11 +58,7 @@ layout: example/views/Author8col
             "name": "fullname",
             "label": {
                 "text": "Full name"
-            },
-            "error": {
-                "id": "fullname-error",
-                "text": "Enter your full name"
-        }
+            }
         })
     }}
 
@@ -72,11 +68,7 @@ layout: example/views/Author8col
             "name": "email",
             "label": {
                 "text": "Email address"
-            },
-            "error": {
-                "id": "email-error",
-                "text": "Enter your email address"
-        }
+            }
         })
     }}
 
@@ -88,8 +80,8 @@ layout: example/views/Author8col
                 "text": "Confirm email address"
             },
             "error": {
-                "id": "confirm-email-error",
-                "text": "Confirm email address"
+                "id": "email-error",
+                "text": "Confirm your email address"
         }
         })
     }}
