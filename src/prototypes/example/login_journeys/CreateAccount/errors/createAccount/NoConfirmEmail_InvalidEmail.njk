@@ -41,16 +41,18 @@ layout: example/views/Author8col
         onsList({
             "element": 'ol',
             "itemsList": [
+
                 {
-                    "text": 'Email addresses from outside the Office for National Statistics are not allowed',
+                    "text": 'Enter an email address in a valid format, for example, name@example.com',
                     "url": '#email-error',
                     "variants": "inPageLink"
-                },                
+                },
                 {
-                    "text": 'Email addresses must match',
+                    "text": 'Confirm your email address',
                     "url": '#confirm-email-error',
                     "variants": "inPageLink"
                 }
+
             ]
         })
     }}
@@ -64,6 +66,7 @@ layout: example/views/Author8col
             "label": {
                 "text": "Full name"
             }
+
         })
     }}
 
@@ -76,7 +79,7 @@ layout: example/views/Author8col
             },
             "error": {
                 "id": "email-error",
-                "text": "Email addresses from outside the Office for National Statistics are not allowed"
+                "text": "Enter an email address in a valid format, for example, name@example.com"
         }
         })
     }}
@@ -90,8 +93,9 @@ layout: example/views/Author8col
             },
             "error": {
                 "id": "confirm-email-error",
-                "text": "Email addresses must match"
+                "text": "Confirm your email address"
         }
+
         })
     }}
 
@@ -110,7 +114,6 @@ layout: example/views/Author8col
 {% endblock %}
 
 {% block bodyEnd %}
-
     <script>
         console.log('hello world');
         var Name = sessionStorage.getItem('Fullname');

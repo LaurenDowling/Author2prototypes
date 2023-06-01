@@ -33,7 +33,7 @@ layout: example/views/Author8col
 
 {% block main %}
     {% call onsPanel({
-        "title": 'There are 2 problems with this page',
+        "title": 'There is a problem with this page',
         "type": 'error',
         "classes": "ons-u-mb-xl"
 }) %}
@@ -42,12 +42,12 @@ layout: example/views/Author8col
             "element": 'ol',
             "itemsList": [
                 {
-                    "text": 'Email addresses from outside the Office for National Statistics are not allowed',
+                    "text": 'Enter your email address',
                     "url": '#email-error',
                     "variants": "inPageLink"
-                },                
+                },
                 {
-                    "text": 'Email addresses must match',
+                    "text": 'Confirm your email address',
                     "url": '#confirm-email-error',
                     "variants": "inPageLink"
                 }
@@ -76,7 +76,7 @@ layout: example/views/Author8col
             },
             "error": {
                 "id": "email-error",
-                "text": "Email addresses from outside the Office for National Statistics are not allowed"
+                "text": "Enter your email address"
         }
         })
     }}
@@ -90,7 +90,7 @@ layout: example/views/Author8col
             },
             "error": {
                 "id": "confirm-email-error",
-                "text": "Email addresses must match"
+                "text": "Confirm your email address"
         }
         })
     }}

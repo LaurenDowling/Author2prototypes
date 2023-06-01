@@ -102,5 +102,24 @@ layout: example/views/Author8col
 
 {% block bodyEnd %}
 
+    <script>
+        console.log('hello world');
+        var Name = sessionStorage.getItem('Fullname');
+        var Email = sessionStorage.getItem('EmailAddress');
+        var ConfirmEmail = sessionStorage.getItem('ConfirmedEmailAddress');
 
+        if((Name != "")){
+            document.getElementById('fullname').value = Name;
+
+        }
+        if((Email != "")){
+            document.getElementById('email').value = Email;
+
+        }    
+        if((ConfirmEmail != "")){
+            document.getElementById('Confirmemail').value = ConfirmEmail;
+
+        }
+
+    </script>
 {% endblock %}

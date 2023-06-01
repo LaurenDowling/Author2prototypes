@@ -13,6 +13,7 @@ layout: example/views/Author8col
     }
 } %}
 
+
 {% block preMain %}
 {{
     onsBreadcrumbs({
@@ -33,7 +34,7 @@ layout: example/views/Author8col
 
 {% block main %}
     {% call onsPanel({
-        "title": 'There are 2 problems with this page',
+        "title": 'There are 3 problems with this page',
         "type": 'error',
         "classes": "ons-u-mb-xl"
 }) %}
@@ -119,6 +120,28 @@ layout: example/views/Author8col
 {% endblock %}
 
 {% block bodyEnd %}
+
+    <script>
+        console.log('hello world');
+        var Name = sessionStorage.getItem('Fullname');
+        var Email = sessionStorage.getItem('EmailAddress');
+        var ConfirmEmail = sessionStorage.getItem('ConfirmedEmailAddress');
+
+        if((Name != "")){
+            document.getElementById('fullname').value = Name;
+
+        }
+        if((Email != "")){
+            document.getElementById('email').value = Email;
+
+        }    
+        if((ConfirmEmail != "")){
+            document.getElementById('Confirmemail').value = ConfirmEmail;
+
+        }
+
+    </script>
+
 
 
 {% endblock %}
