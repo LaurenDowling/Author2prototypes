@@ -114,6 +114,10 @@ layout: example/views/Author8col
             sessionStorage.setItem('EmailAddress', y);    
             sessionStorage.setItem('ConfirmedEmailAddress', z);   
 
+            if ((x != "") && (y != "") && (z != "") && (y == z) && (y.indexOf("@") != -1) && (y.includes("@ons.gov.uk") == true)) {
+ 
+                document.forms["myForm"].action = "/prototypes/example/login_journeys/CreateAccount/CheckEmail.html";    
+            }
             if ((x == "") && (y == "") && (z == "")) {
                 document.forms["myForm"].action = "/prototypes/example/login_journeys/CreateAccount/errors/createAccount/AllinputsBlank.html";    
             }
