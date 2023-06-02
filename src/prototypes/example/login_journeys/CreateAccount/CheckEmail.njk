@@ -34,7 +34,7 @@ layout: example/views/Author8col
 {% block main %}
     <h1 class="ons-u-mb-s"><span class="ons-u-fs-m ons-u-db ons-u-mb-xs ons-u-lighter">Create an account</span>Check your email</h1>
 
-    <p>We have sent an email to: <strong class="ons-u-fs-r--b">john.smith@ons.gov.uk</strong></p>
+    <p>We have sent an email to: <strong id="boldedEmail" class="ons-u-fs-r--b"></strong></p>
     
     <p>The email contains a link that you must click to verify your email address.</p>
     
@@ -49,5 +49,11 @@ layout: example/views/Author8col
 
 {% block bodyEnd %}
 
+<script>
+    const pipeEmail = document.getElementById("boldedEmail");
+    var enteredEmail = sessionStorage.getItem('EmailAddress');
+    pipeEmail.innerHTML = enteredEmail;
+
+</script>
 
 {% endblock %}
