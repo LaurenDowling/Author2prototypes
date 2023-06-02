@@ -48,7 +48,7 @@ layout: example/views/Author8col
             "itemsList": [
                 {
                     "text": 'Passwords must match',
-                    "url": '#password-error',
+                    "url": '#confirm-password-error',
                     "variants": "inPageLink"
                 }
 
@@ -73,11 +73,7 @@ layout: example/views/Author8col
         "label": {
             "text": "Password"
         },
-        "showPasswordText": "Show password",
-        "error": {
-            "id": "password-error",
-            "text": "Passwords must match"
-        }
+        "showPasswordText": "Show password"
 
     })
 }}
@@ -89,7 +85,11 @@ layout: example/views/Author8col
         "label": {
             "text": "Confirm password"
         },
-        "showPasswordText": "Show password"
+        "showPasswordText": "Show password",
+        "error": {
+            "id": "confirm-password-error",
+            "text": "Passwords must match"
+        }
 
     })
 }}

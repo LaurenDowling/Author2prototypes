@@ -38,7 +38,7 @@ layout: example/views/Author8col
 
 {% block main %}
     {% call onsPanel({
-        "title": 'There is a problem with this page',
+        "title": 'There are 2 problems with this page',
         "type": 'error',
         "classes": "ons-u-mb-xl"
 }) %}
@@ -46,9 +46,13 @@ layout: example/views/Author8col
         onsList({
             "element": 'ol',
             "itemsList": [
-
                 {
-                    "text": 'Confirm your password',
+                    "text": 'Your password must include at least 16 characters',
+                    "url": '#password-error',
+                    "variants": "inPageLink"
+                },
+                {
+                    "text": 'Passwords must match',
                     "url": '#confirm-password-error',
                     "variants": "inPageLink"
                 }
@@ -74,7 +78,11 @@ layout: example/views/Author8col
         "label": {
             "text": "Password"
         },
-        "showPasswordText": "Show password"
+        "showPasswordText": "Show password",
+        "error": {
+            "id": "password-error",
+            "text": "Your password must include at least 16 characters help"
+        }
 
     })
 }}
@@ -89,8 +97,9 @@ layout: example/views/Author8col
         "showPasswordText": "Show password",
         "error": {
             "id": "confirm-password-error",
-            "text": "Confirm your password"
+            "text": "Passwords must match"
         }
+
     })
 }}
 
