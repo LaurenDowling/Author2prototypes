@@ -1,4 +1,4 @@
-function validateForm(){
+export default function validateForm(){
     alert('it works')
     let a = document.forms["myForm"]["fullname"].value;
     let b = document.forms["myForm"]["email"].value;
@@ -82,4 +82,5 @@ function validateForm(){
     }
     return console.log('run');
 }
-alert('here')
+alert('here');
+window.validateForm = validateForm;
