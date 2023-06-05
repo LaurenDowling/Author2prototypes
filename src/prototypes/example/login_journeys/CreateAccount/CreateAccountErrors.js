@@ -1,5 +1,5 @@
 function validateForm(){
-    console.log('run');
+    alert('it works')
     let a = document.forms["myForm"]["fullname"].value;
     let b = document.forms["myForm"]["email"].value;
     let c = document.forms["myForm"]["Confirmemail"].value;
@@ -80,5 +80,6 @@ function validateForm(){
     if ((x != "") && (y != "") && (z != "") && (y == z) && (y.indexOf("@") != -1) && (y.includes("@ons.gov.uk") == false)) {
         document.forms["myForm"].action = "/prototypes/example/login_journeys/CreateAccount/errors/createAccount/NotONSEmail.html";    
     }
-
+    return console.log('run');
 }
+alert('here')
